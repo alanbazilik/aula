@@ -32,5 +32,20 @@
 
   <button ion-button block (click)="save()">Salvar</button>
 
+  <div class="list">
+ <ion-list>
+  <ion-card *ngFor="let item of contacts">
+    <ion-card-header>
+      <h1>{{item?.contact?.nome | uppercase}}</h1>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{item?.contact?.email | uppercase}}</p>
+    </ion-card-content>
+    <ion-card-content>
+      <p>{{item?.contact?.telefone | uppercase}}</p>
+    </ion-card-content>
+  </ion-card>
+ </ion-list>
+  </div>
 </ion-content>
 
